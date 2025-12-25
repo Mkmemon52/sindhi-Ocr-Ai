@@ -6,8 +6,13 @@ export class GeminiService {
 
   constructor() {
     // For Netlify/production, use import.meta.env with VITE_ prefix
-    // Vite requires environment variables to be prefixed with VITE_
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    
+    // Debug logging (remove after fixing)
+    console.log('Environment check:', {
+      hasApiKey: !!apiKey,
+      envKeys: Object.keys(import.meta.env),
+    });
     
     if (!apiKey) {
       throw new Error("API key is missing. Please provide a valid API key in your environment variables.");
@@ -17,7 +22,6 @@ export class GeminiService {
   }
 
   async processImage(base64Image: string): Promise<QuestionPaperContent> {
-    // Using Flash for speed and stability as requested by the user
     const modelName = 'gemini-3-flash-preview';
     const prompt = `
       ACT AS A HIGH-SPEED, HIGH-PRECISION SINDHI & ENGLISH OCR ENGINE.
@@ -60,7 +64,6 @@ export class GeminiService {
         },
         config: {
           responseMimeType: "application/json",
-          // No thinking budget for maximum speed as requested
           responseSchema: {
             type: Type.OBJECT,
             properties: {
