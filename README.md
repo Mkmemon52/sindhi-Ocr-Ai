@@ -107,38 +107,6 @@ sindhi-ocr/
 - Select "Save as PDF" as printer
 - Choose location and save
 
-## 🌐 Deployment
-
-See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed deployment instructions.
-
-### Quick Deploy to Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
-
-1. Click the button above
-2. Connect your repository
-3. Add `VITE_GEMINI_API_KEY` in environment variables
-4. Deploy!
-
-## 🔒 Environment Variables
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `VITE_GEMINI_API_KEY` | Google Gemini API key | Yes |
-
-⚠️ **Important**: All environment variables must be prefixed with `VITE_` to be accessible in the application.
-
-## 🐛 Known Issues & Solutions
-
-### "API key is missing" Error
-
-**Cause**: Environment variable not properly configured
-
-**Solution**:
-1. Ensure `.env.local` contains `VITE_GEMINI_API_KEY=your_key`
-2. Restart development server
-3. For production, set environment variable in Netlify dashboard
-
 ### OCR Accuracy Issues
 
 **Tips for better accuracy**:
@@ -165,9 +133,6 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
