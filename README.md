@@ -3,7 +3,6 @@
 A powerful web application that performs high-precision Optical Character Recognition (OCR) on Sindhi script using Google's Gemini AI. Upload images of handwritten or printed Sindhi question papers, and get perfectly formatted, editable digital versions.
 
 ![Sindhi OCR Demo](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## ✨ Features
 
