@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SindhiPaper AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&family=Noto+Serif:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-formal-serif {
+        font-family: 'Noto Serif', serif;
+      }
+      .sindhi-text {
+        font-family: 'Lateef', serif;
+        font-size: 1.5em;
+        line-height: 1.4;
+      }
+      
+      /* Specific Divider Style from Image */
+      .double-line-divider {
+        border-top: 3px solid black;
+        border-bottom: 1px solid black;
+        height: 4px;
+        margin: 8px 0;
+        width: 100%;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      @media print {
+        body {
+          background: white !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        #root {
+          display: none !important;
+        }
+        #printable-area {
+          display: flex !important;
+          visibility: visible !important;
+          position: static !important;
+          width: 210mm !important;
+          height: 297mm !important;
+          padding: 15mm 20mm !important;
+          margin: 0 !important;
+          border: none !important;
+          box-shadow: none !important;
+          color: black !important;
+          background-color: white !important;
+        }
+        .print-hidden {
+          display: none !important;
+        }
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 min-h-screen">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

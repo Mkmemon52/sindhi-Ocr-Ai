@@ -1,0 +1,7 @@
+{
+  "name": "Ai for Sindhi Script (20 dec)",
+  "description": "An AI-powered tool for educators to convert handwritten or printed Sindhi script images into professional, A4-formatted digital question papers with OCR technology.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
